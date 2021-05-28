@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mayo282021.modelo
 {
-    class Cliente
+    public class Cliente
     {
         // propiedades
         public string Nombre {set; get;}

@@ -1,11 +1,14 @@
 ﻿using Mayo282021.modelo;
 using Mayo282021.servicio;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Mayo282021
 {
     class Program
     {
+
+        [ExcludeFromCodeCoverage]
         static void Main(string[] args)
         {
             // variables
@@ -102,6 +105,25 @@ namespace Mayo282021
             Console.WriteLine( servicio.Validar(john) );
 
             Console.WriteLine( ClienteServicio.ValidarEstatica(john) );
+
+            // ejercicio encomienda;
+
+            var enc=new Encomienda();
+            enc.Ancho=2;
+            enc.Alto=2;
+            enc.Largo=2;
+            enc.NombreCliente="john";
+            enc.Direccion="sunset blv";
+
+            Console.WriteLine( EncomiendaServicio.Validar(enc) );
+
+            var enc2=new Encomienda(2,2,2,"john","sunset blv");
+
+            var enc3=new Encomienda
+            {
+                Ancho=2,Alto=2,Largo=2,NombreCliente="John",Direccion="Sunset blv"
+            };
+
 
 
         }

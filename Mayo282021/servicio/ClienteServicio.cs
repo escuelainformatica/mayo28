@@ -9,7 +9,7 @@ namespace Mayo282021.servicio
 {
     // clase de servicio es una coleccion de metodos o funciones.
     // y por lo general no quiero tener campos.
-    class ClienteServicio
+    public class ClienteServicio
     {
         public int campo;
 
