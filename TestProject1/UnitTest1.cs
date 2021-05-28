@@ -24,6 +24,8 @@ namespace TestProject1
             enc=new Encomienda(-1,2,3,"aaa","");
             Assert.AreEqual(false, EncomiendaServicio.Validar(enc) );
 
+            EncomiendaServicio.Mostrar(enc);
+
             // probar base de datos
             // base de datos falsa (mockup)
 

@@ -117,12 +117,51 @@ namespace Mayo282021
 
             Console.WriteLine( EncomiendaServicio.Validar(enc) );
 
-            var enc2=new Encomienda(2,2,2,"john","sunset blv");
+            var enc2=new Encomienda(2,2,2,null,"sunset blv");
+
+
+            // "" = texto de largo cero.
+            // null = no hay datos, no se ha digitado = no hay memoria.
+
+            Console.WriteLine("La encomienda enc2 es valida?: "+ EncomiendaServicio.Validar(enc2) );
 
             var enc3=new Encomienda
             {
                 Ancho=2,Alto=2,Largo=2,NombreCliente="John",Direccion="Sunset blv"
             };
+
+            EncomiendaServicio.Mostrar(enc);
+            EncomiendaServicio.Mostrar(enc2);
+            EncomiendaServicio.Mostrar(enc3);
+
+            // operadores binarios
+            //  1+2
+            //  1<2
+            // operadores unitarios
+            //  ! (negando).
+            //  !true -> falso
+            //  !falso -> true
+            // Operador ternario
+            //   true ? 10 : 20
+
+
+            int resultado5=0;
+
+            if(1<2)
+            {
+                resultado5=5;
+            } else
+            {
+                resultado5=6;
+            }
+
+            resultado5= (1<2) ? 5 : 6;
+
+
+
+
+
+
 
 
 
