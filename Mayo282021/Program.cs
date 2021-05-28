@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Mayo282021.modelo;
+using Mayo282021.servicio;
+using System;
 
 namespace Mayo282021
 {
@@ -71,15 +73,35 @@ namespace Mayo282021
             }
 
 
+            // switch y case
+            int num3=5;
 
+            switch(num3)
+            {
+                case 1:
+                    Console.WriteLine("uno");
+                    break;
+                case 2:
+                    Console.WriteLine("dos");
+                    break;
+                case 3:
+                    Console.WriteLine("tres");
+                    break;
+                default:
+                    Console.WriteLine("otro numero");
+                    break; // salir del bloque de codigo
+            }
 
+            // variable esta definida por una clase, se llama objeto
+            var john=new Cliente();
+            john.Nombre="john";
+            john.Edad=33;
+            john.Deuda=-5;
 
+            var servicio=new ClienteServicio();
+            Console.WriteLine( servicio.Validar(john) );
 
-
-
-
-
-
+            Console.WriteLine( ClienteServicio.ValidarEstatica(john) );
 
 
         }
